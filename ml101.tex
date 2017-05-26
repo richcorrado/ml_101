@@ -79,9 +79,9 @@ Ex:
 Approaches include:
 
 \begin{itemize}
-\item {\bf Clustering}: How do features segment data into groups of similar examples? Ex: Segment population into communites/market segments,  also genetic sequencing.
+\item {\bf Clustering}: How do features segment data into groups of similar examples? Ex: Segment population into communities/market segments,  also genetic sequencing.
 \item {\bf Anomaly Detection}: Are some examples considerably different from all of the rest? Ex: Fraud detection, network intrusion.  
-\item {\bf Latent Variables}: Identify potential targets for supervised learning on data.
+\item {\bf Latent Variables}: Identify better features for modeling or potential targets for supervised learning on data.
 
 \end{itemize}
 \end{frame}
@@ -91,7 +91,7 @@ Approaches include:
 {\bf Reinforcement Learning}: 
 \bigskip
 
-Train {\bf software agent} to take {\bf actions} in an {\bf enviroment} to maximize {\bf cumulative reward}.  
+Train {\bf software agent} to take {\bf actions} in an {\bf environment} to maximize {\bf cumulative reward}.  
 \bigskip
 
 Ex:
@@ -183,7 +183,7 @@ Examples:
 $$p(y|\mathbf{x}\bm{\theta} ) = \prod_i p(y_i|\mathbf{x}_i\bm{\theta} ) .$$
 {\bf Technical point}: Maximizing this probability is equivalent to minimizing
 $$  J(\bm{\theta}) = - \ln p(y|\mathbf{x}\bm{\theta} )  = - \sum_i \ln p(y_i|\mathbf{x}_i\bm{\theta} ).$$
-This function is called the  {\bf cost/loss function}.  Exchaning the product for a sum is a useful computational simplification.
+This function is called the  {\bf cost/loss function}.  Exchanging the product for a sum is a useful computational simplification.
 \bigskip
 
 Given training data $\{ (\mathbf{x}_i, y_i)\}$, find values $\bm{\theta}$ that minimize $J(\bm{\theta})$.
