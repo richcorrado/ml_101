@@ -230,6 +230,57 @@ $\alpha$ is usually called the {\bf learning rate}.
 \end{frame}
 
 
+\begin{frame}{Validation of Models}
+
+We train our models because we want to make predictions on new (future) data:
+\centerline{
+\includegraphics[height=0.55\textheight]{images/need_validation.png}
+}
+
+\noindent
+For new data, we don't know the target (wouldn't need a model if we did), so how can we be confident that our prediction is good?
+$\longrightarrow$ {\bf validation}!
+\end{frame}
+
+\begin{frame}{Sampling and Statistics} 
+\centerline{
+\includegraphics[height=0.75\textheight]{images/populations.png}
+}
+\end{frame}
+
+\begin{frame}{Sampling and Statistics} 
+\centerline{
+\includegraphics[height=0.4\textheight]{images/populations.png}
+}
+If observations are chosen randomly, for a large enough sample, statistics like mean, standard deviation should be very close to those of the whole population $\longrightarrow$ want our labeled data to be representative of the population.
+\end{frame}
+
+\begin{frame}{Train - Test Split} 
+If our labeled data is representative, so will a randomly chosen subset (if "large enough").
+\centerline{
+\includegraphics[height=0.5\textheight]{images/train_test.png}
+}
+\noindent
+Training data $\longrightarrow$ Used to train the model. \\
+Test data $\longrightarrow$ Held out, only used to test the model predictions.
+\end{frame}
+
+\begin{frame}{Cross-Validation}
+More sophisticated schemes are often used, such as {\bf K-fold cross-validation} :
+\centerline{
+\includegraphics[height=0.25\textheight]{images/crossval.png}
+}
+\noindent
+\begin{enumerate}
+\item Train on $(1,2,3,4)$, compute test error on 5.
+\item Train on $(1,2,3,5)$, compute test error on 4.
+\item \ldots
+\end{enumerate}
+Examine average and standard deviation of test errors. \\
+{\bf Pro}: Uses all of the labeled data. \\
+{\bf Cons}: Computational expensive, can't use for time series.
+\end{frame}
+
 \begin{frame}{Bias vs. Variance Tradeoff} 
 
 In any ML problem must look out for:
